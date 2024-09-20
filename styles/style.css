@@ -1,6 +1,6 @@
 /* место для вашего кода */
 
-/* стилизуем блок header */
+/* начало стилизации блока header */
 
 .header {
     padding: 92px 24px 96px;
@@ -62,7 +62,9 @@
     letter-spacing: 1%;
 }
 
-/* стилизуем блок cover */
+/* конец стилизации блока header */
+
+/* начало стилизации блока cover */
 
 .cover {
     background-image: url(../images/cover.jpg);
@@ -165,7 +167,9 @@
     background-color: transparent;
 }
 
-/* стилизуем блок lots */
+/* конец стилизации блока cover */
+
+/* начало стилизации блока lots */
 
 .lots {
     padding: 0 24px;
@@ -252,7 +256,9 @@
     padding-left: 40px;
 }
 
-/* стилизуем блок about */
+/* конец стилизации блока lots */
+
+/* начало стилизации блока about */
 
 .about {
     padding: 0 24px;
@@ -304,7 +310,9 @@
     margin-bottom: 24px;
 }
 
-/* стилизуем блок footer */
+/* конец стилизации блока about */
+
+/* начало стилизации блока footer */
 
 .footer {
     display: grid;
@@ -348,3 +356,5 @@
     width: 100%;
     height: 100%;
 }
+
+/* конец стилизации блока footer */
