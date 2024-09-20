@@ -191,8 +191,8 @@
     grid-template-rows: 563px;
     list-style-type: none;
     margin-bottom: 30px;
-    column-gap: 25px; 
-}
+    column-gap: 25px;
+}   
 
 .card {
     position: relative;
