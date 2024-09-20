@@ -189,9 +189,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 563px;
-    column-gap: 25px; 
     list-style-type: none;
     margin-bottom: 30px;
+    column-gap: 25px; 
 }
 
 .card {
