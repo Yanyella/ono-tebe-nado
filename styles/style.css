@@ -3,7 +3,7 @@
 /* начало стилизации блока header */
 
 .header {
-    padding: 92px 24px 96px;
+    padding: 92px 45px 95px 50px;
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr;
     justify-items: center;
@@ -16,8 +16,12 @@
 
 .header__links-list {
     display: flex;
-    column-gap: 30px;
+    column-gap: 31px;
     list-style-type: circle;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.13px;
+    letter-spacing: 0.01em;
 }
 
 .header__links-list-no-button {
@@ -29,7 +33,7 @@
     text-decoration: none;
 }     
 
-.header__link_active {
+.link_active {
     text-decoration: underline;
     text-underline-offset: 4px;
 }
@@ -47,7 +51,7 @@
     font-style: normal;
     font-size: 18px;
     font-weight: 400;
-    line-height: 21.13px;
+    line-height: 24.3px;
 }
 
 .address__link {
@@ -67,14 +71,13 @@
 /* начало стилизации блока cover */
 
 .cover {
-    background-image: url(../images/cover.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 757px;
+    background: url(../images/cover.jpg) no-repeat center / cover;
     color: #FFFFFF;
     position: relative;
     margin-bottom: 179px;
+    padding: 165px 50px 50px;
+    min-height: 756px;
+    z-index: 1;
 }
 
 .overlay {
@@ -83,34 +86,23 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
-}
-
-.cover__slogan {
-    position: absolute;
-    padding: 165px 50px 51px;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+    inset: 0;
+    z-index: 2;
 }
 
 .cover__title {
+    position: relative;
     font-size: 100px;
     font-weight: 700;
     line-height: 115px;
     letter-spacing: 0.3em;
     text-transform: uppercase;
+    z-index: 3;
 }
 
 .aligned-text_left {
     display: block;
-    margin-bottom: 20px;
-}
-
-.aligned-text_left span {
-    letter-spacing: 0.6em;
+    margin-bottom: 19px;
 }
 
 .aligned-text_center {
@@ -120,43 +112,43 @@
     margin-bottom: 20px;
 }
 
-.aligned-text_center span {
-    line-height: 100px;
-    letter-spacing: 0.6em;
-}
-
 .aligned-text_right {
     display: block;
     text-align: right;
-    margin-bottom: 135px;
     line-height: 100px;
-    letter-spacing: 0.6em;
-}
-
-.aligned-text_right span {
-    letter-spacing: 0.3em;
+    margin-bottom: 135px;
 }
 
 .letter-spacing {
-    margin-right: -30px;
+    letter-spacing: 0.3em;
+}
+
+.letter-spacing-extended {
+    letter-spacing: 0.6em;
+}
+
+.no-letter-spacing {
+    letter-spacing: 0;
 }
 
 .cover__description {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 28px;
+    z-index: 4;
 }
 
 .cover__description-text {
     font-size: 22px;
-    font-weight: 400;
     line-height: 28px;
+    word-spacing: 18px;
     text-transform: uppercase;
-    word-spacing: 15px;
 }
 
 .button {
-    font-family: Raleway;
+    font-family: 'Raleway', sans-serif;
     color: #FFFFFF;
     font-size: 22px;
     font-weight: 500;
@@ -173,7 +165,7 @@
 
 .lots {
     padding: 0 24px;
-    margin-bottom: 146px;
+    margin-bottom: 181px;
 }
 
 .lots__title {
@@ -183,6 +175,7 @@
     color: #000000;
     padding-left: 40px;
     margin-bottom: 27px;
+    text-transform: uppercase;
 }
 
 .lots__cards-list {
@@ -200,20 +193,24 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 100%;
+    height: 561px;
     color: #FFFFFF;
-    padding: 51px 40px 48px;
+    padding: 48px 40px 48px;
+    display: flex;
+    flex-direction: column;
+    column-gap: 25px;
+    justify-content: space-between;
 }
 
-.card-first {
+.card-frame-movie {
     background-image: url(../images/card-lot-01.jpg);
 }
 
-.card-second {
+.card-book-cover {
     background-image: url(../images/card-lot-02.jpg);
 }
 
-.card-third {
+.card-abstract-drawing {
     background-image: url(../images/card-lot-03.jpg);
 }
 
@@ -221,30 +218,23 @@
     text-decoration: none;
 }
 
-.card__description {
-    position: absolute;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    top: 0;
-    left: 0;
-    padding: 51px 40px 48px;
-}
-
 .card__title {
+    position: relative;
     font-size: 22px;
     font-weight: 700;
     line-height: 26.4px;
     text-transform: uppercase;
     text-decoration: underline;
     text-underline-offset: 4px;
+    z-index: 3;
 }
 
 .card__text {
+    position: relative;
     font-size: 20px;
     font-weight: 400;
     line-height: 24px;
+    z-index: 3;
 }
 
 .lots__look-more-link {
@@ -261,14 +251,13 @@
 /* начало стилизации блока about */
 
 .about {
-    padding: 0 24px;
-    margin-bottom: 180px;
+    padding: 0 23px 180px 71px;
 }
 
 .about__column {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 595px;
+    grid-template-columns: 1fr 2.2fr;
+    grid-template-rows: 1fr;
 }
 
 .about__logo {
@@ -295,8 +284,15 @@
     font-weight: 700;
     line-height: 46.96px;
     color: #000000;
-    margin-bottom: 100px;
     text-transform: uppercase;
+    padding: 100px 0px;
+}
+
+.about__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
 }
 
 .about__text {
@@ -306,8 +302,16 @@
     letter-spacing: 0.01em;
 }
 
-.about__text-first {
-    margin-bottom: 24px;
+.letter-spacing-two-percent {
+    letter-spacing: 0.02em;
+}
+
+.letter-spacing-negative {
+    letter-spacing: -0.01em;
+}
+
+.letter-spacing-three-percent {
+    letter-spacing: 0.06em;
 }
 
 /* конец стилизации блока about */
@@ -319,24 +323,18 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 98px;
     padding: 0 50px;
-    margin-bottom: 88px;
 }
 
 .footer__menu {
     justify-self: center;
     text-align: center;
 }
-
-.footer__tel, .footer__email {
-    display: block;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    letter-spacing: 1%;
-}
     
 .footer__links-list {
     list-style-type: none;
-
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.13px;
 }
 
 .footer__social-list {
